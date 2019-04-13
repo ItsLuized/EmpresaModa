@@ -1,7 +1,5 @@
 CREATE DATABASE EmpresaModa;
 
-USE EmpresaModa;
-
 CREATE TABLE Cargo(
 ID_Cargo INTEGER(5) NOT NULL,
 NombreCargo VARCHAR(50) NOT NULL,

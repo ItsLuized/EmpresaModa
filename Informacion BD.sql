@@ -12,8 +12,6 @@ VALUES
 (0,'Comprador Senior','Se encarga de cerrar contratos'),
 (2,'Comprador Junior','En proceso de aprendizaje');
 
-ALTER TABLE Cargo CHANGE Descripcion DescripcionCargo VARCHAR(300) NOT NULL;
-
 -- DATOS EMPLEADO
 
 INSERT INTO Empleado(ID_Empleado,NombreEmpleado,ApellidoEmpleado,DireccionEmpleado,ID_Empresa,ID_Cargo)
@@ -120,10 +118,6 @@ VALUES
 (8,14,1,'2019-01-03'),
 (10,15,1,'2019-03-23'),
 (11,16,2,'2019-03-23');
-
-
-/* No neceseriamente el ID y el Proceso son los mismos, con eso
-puedes jugar bastante */
 
 -- DATOS TIPO DE PRENDA
 INSERT INTO Tipo_de_Prenda(ID_Tipo_Prenda,NombreTipoPrenda,DescripcionTipoPrenda)
