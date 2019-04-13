@@ -6,7 +6,7 @@ Una Base de Datos para una Empresa de Moda, creada con MySQL, que se debe conect
 
 Usamos [Git](http://git-scm.com) para control de versiones. 
 
-## Authors
+## Autores
 
 * **Luis Martínez** - [ItsLuized](https://github.com/ItsLuized)
 * **Sebastián Gitaldo** - [SGiraldoZ](https://github.com/SGiraldoZ)
