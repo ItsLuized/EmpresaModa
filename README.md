@@ -13,4 +13,6 @@ Usamos [Git](http://git-scm.com) para control de versiones.
 * **Juanse Obando** - [TheObands](https://github.com/TheObands)
 * **Mateo Bravo** 
 
+## Diagrama Lógico-Relacional
+
 ![alt text](https://github.com/ItsLuized/EmpresaModa/blob/master/DiagramaLogicoRelacional.jpeg)
