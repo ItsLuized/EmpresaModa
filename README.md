@@ -1,6 +1,7 @@
 # Empresa de Moda
 
 Una Base de Datos para una Empresa de Moda, creada con MySQL, que se debe conectar con una pagina web
+---
 
 ## Versioning
 
@@ -12,6 +13,14 @@ Usamos [Git](http://git-scm.com) para control de versiones.
 * **Sebastián Gitaldo** - [SGiraldoZ](https://github.com/SGiraldoZ)
 * **Juanse Obando** - [TheObands](https://github.com/TheObands)
 * **Mateo Bravo** 
+
+## Frameworks
+
+* Flask
+* Pandas
+* Matplotlib
+
+---
 
 ## Diagrama Lógico-Relacional
 

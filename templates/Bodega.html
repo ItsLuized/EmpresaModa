@@ -1,0 +1,78 @@
+<DOCTYPE html>
+<html>
+
+<title>Proveedores</title>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
+    <!-- Custom styles for this template -->
+    <link href="/css/estilo.css" rel="stylesheet">
+    <link href="/css/starter-template.css" rel="stylesheet">
+  </head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Parfait</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+          <a class="nav-link" href="{{ url_for('homepage')}}">Homepage</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('empleado')}}">Datos Personales</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('proveedores')}}">Proveedores</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('materiaPrima')}}">Materia Prima</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('plantaProduccion')}}">Plantas de Produccion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('bodega')}}">Bodegas</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('prendas')}}">Prendas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('inventario')}}">Comprar Inventario</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1 align="center"><strong>Bodega&nbsp;</strong></h1>
+
+<select name="OS">
+<option selected="selected" value="0">Escoge la Bodega</option>
+<option value="1">Bodega 1</option>
+</select>
+<div>
+<p align="center">&nbsp;<strong>Direcci&oacute;n</strong></p>
+<p align="center"><textarea cols="60" name="text" rows="2"></textarea></p>
+<p align="center">&nbsp;<strong>Capacidad de almacenamiento</strong></p>
+<p align="center"><textarea cols="60" name="text" rows="1"></textarea></p>
+<p align="center">&nbsp;<strong>Lote</strong></p>
+<p align="center"><textarea cols="60" name="text" rows="1"></textarea></p>
+<p align="center">&nbsp;<strong>Ubicación</strong></p>
+<p align="center"><textarea cols="60" name="text" rows="2"></textarea></p>
+</div>
+</body>
+</html>
