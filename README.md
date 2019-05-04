@@ -1,7 +1,6 @@
 # Empresa de Moda
 
 Una Base de Datos para una Empresa de Moda, creada con MySQL, que se debe conectar con una pagina web
----
 
 ## Versioning
 
