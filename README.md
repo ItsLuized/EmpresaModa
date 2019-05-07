@@ -13,11 +13,12 @@ Usamos [Git](http://git-scm.com) para control de versiones.
 * **Juanse Obando** - [TheObands](https://github.com/TheObands)
 * **Mateo Bravo** 
 
-## Frameworks
+## Frameworks & Libraries
 
 * Flask
+* PyMySQL
 * Pandas
-* Matplotlib
+
 
 ---
 
