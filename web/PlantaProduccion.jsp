@@ -70,8 +70,8 @@
     <table border="2" align="center" > 
       
      <tr>
-     <th>NIT Planta</th>
-     <th>Direccion</th>
+     <th>NIT de la Planta</th>
+     <th>Dirección</th>
      <th>Proceso</th>
      </tr>
      
@@ -90,7 +90,7 @@
 
     }  
 %>
-
+    </table>
 
      <p>&nbsp;</p>
      <p>&nbsp;</p>

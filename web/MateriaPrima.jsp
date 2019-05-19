@@ -4,6 +4,7 @@
     Author     : Juan
 --%>
 
+<%@page import="modelos.MP"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <IDOCTYPE html>
 <html>
@@ -67,19 +68,40 @@
 <p>&nbsp;</p>
 <h1 align="center"><strong>Materia Prima&nbsp;</strong></h1>
 
-<select align="center" name="OS">
-<option align="center" selected="selected" value="0">Escoge la materia prima deseada</option>
-<option value="1">Materia Prima 1</option>
-<option value="2">Materia Prima 2</option>
-<option value="3">Materia Prima 3</option>
-</select>
+
+ <table border="2" align="center" > 
+      
+     <tr>
+     <th>Nombre de la Materia Prima</th>
+     <th>Tipo de Materia Prima</th>
+     <th>Ubicación actual</th>
+     <th>Proveedor que vende esta Materia Prima</th>
+     </tr>
+     
+    <%
+    MP data = new MP();
+    String[][] filas =  data.getData();
+    for(int i=1; i<filas.length; i++)
+    {
+        %>
+        <tr>
+        <td><%=filas[i][0]%></td>
+        <td><%=filas[i][1]%></td>
+        <td><%=filas[i][2]%></td>
+        <td><%=filas[i][3]%></td>
+        </tr>
+        <% 
+
+    }  
+%>
+    </table>
+
+
+
+
 <div>
 <p align = "center">&nbsp;<strong>Nombre</strong></p>
 <p align = "center"><textarea cols="60" name="Nombre" rows="1"></textarea></p>
-<p align = "center">&nbsp;<strong>Direcci&oacute;n</strong></p>
-<p align = "center"><textarea cols="60" name="Direccion" rows="1"></textarea></p>
-<p align = "center">&nbsp;<strong>Email</strong></p>
-<p align = "center"><textarea cols="60" name="Email" rows="1"></textarea></p>
 <p align = "center">&nbsp;<strong>Tipo de Materia Prima</strong></p>
 <p align = "center"><textarea cols="60" name="Tipo MP" rows="1"></textarea></p>
 <p align = "center">&nbsp;<strong>Ubicación del Lote</strong></p>

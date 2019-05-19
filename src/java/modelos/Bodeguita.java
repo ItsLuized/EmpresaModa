@@ -16,10 +16,10 @@ import java.util.logging.Logger;
  *
  * @author egarces
  */
-public class ProveeD extends New_Connection {
+public class Bodeguita extends New_Connection {
     //private final String bdp      = "autenticar";
     
-    public ProveeD() throws Exception {
+    public Bodeguita() throws Exception {
         
 
     }
@@ -34,15 +34,10 @@ public class ProveeD extends New_Connection {
         ResultSet rs = null;
         try
         {
-            String consulta = "SELECT Pro.NombreProveedor,Pro.DireccionProveedor,Pro.EmailProveedor,\n" +
-                                "MP.NombreLoteMP, MP.Precio, TMP.NombreTipoMP\n" +
-                                "FROM Proveedor Pro INNER JOIN Compra C\n" +
-                                "ON Pro.ID_Proveedor=C.ID_Proveedor\n" +
-                                "INNER JOIN Lote_Materia_Prima MP\n" +
-                                "ON MP.ID_Lote_MP=C.ID_Lote_MP\n" +
-                                "INNER JOIN Tipo_Materia_Prima TMP\n" +
-                                "ON MP.ID_Tipo_MP=TMP.ID_Tipo_MP\n" +
-                                "ORDER BY TMP.NombreTipoMP";
+            String consulta = "SELECT B.DescripcionBodega,B.DireccionBodega,COUNT(MP.ID_Lote_MP)\n" +
+                                "FROM Bodega B INNER JOIN Lote_Materia_Prima MP\n" +
+                                "ON B.ID_Bodega=MP.ID_Bodega\n" +
+                                "GROUP BY B.ID_Bodega";
             ps = getNew_Connection().prepareStatement(consulta);
             rs = ps.executeQuery();
             
@@ -65,10 +60,7 @@ public class ProveeD extends New_Connection {
             {
                 filas[i][0] = rs.getString(1);
                 filas[i][1] = rs.getString(2);
-                filas[i][2] = rs.getString(3);
-                filas[i][3] = rs.getString(4);
-                filas[i][4] = Integer.toString(rs.getInt(5));
-                filas[i][5] = rs.getString(6);
+                filas[i][2] = Integer.toString(rs.getInt(3));
                 i++;
             }
         }
@@ -90,9 +82,9 @@ public class ProveeD extends New_Connection {
     
     public static void main(String[] args)
     {
-        ProveeD co;
+        Bodeguita co;
         try {
-            co = new ProveeD();
+            co = new Bodeguita();
             String[][] columnas = co.getData();
             for(int i=1; i<columnas[0].length; i++)
             {
@@ -105,7 +97,7 @@ public class ProveeD extends New_Connection {
                 System.out.println(it.next());
             }*/
         } catch (Exception ex) {
-            Logger.getLogger(ProveeD.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Bodeguita.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

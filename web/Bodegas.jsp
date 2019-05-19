@@ -4,6 +4,7 @@
     Author     : Juan
 --%>
 
+<%@page import="modelos.Bodeguita"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <DOCTYPE html>
@@ -66,12 +67,42 @@
   
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<h1 align="center"><strong>Bodega&nbsp;</strong></h1>
+<h1 align="center"><strong>Bodegas&nbsp;</strong></h1>
 
 <select name="OS">
 <option selected="selected" value="0">Escoge la Bodega</option>
 <option value="1">Bodega 1</option>
 </select>
+
+ <table border="2" align="center" > 
+      
+     <tr>
+     <th>Bodega</th>
+     <th>Dirección</th>
+     <th>Cantidad de lotes de materia prima almacenados</th>
+     </tr>
+     
+    <%
+    Bodeguita data = new Bodeguita();
+    String[][] filas =  data.getData();
+    for(int i=1; i<filas.length; i++)
+    {
+        %>
+        <tr>
+        <td><%=filas[i][0]%></td>
+        <td><%=filas[i][1]%></td>
+        <td><%=filas[i][2]%></td>
+        </tr>
+        <% 
+
+    }  
+%>
+    </table>
+
+
+
+
+
 <div>
 <p align="center">&nbsp;<strong>Direcci&oacute;n</strong></p>
 <p align="center"><textarea cols="60" name="Direccion" rows="2"></textarea></p>
