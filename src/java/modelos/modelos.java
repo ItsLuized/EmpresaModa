@@ -29,7 +29,7 @@ public class modelos extends New_Connection {
         int i = 1;
         int j = 0;
         String[][] filas = null;
-        filas = new String[20][20];
+       // filas = new String[20][20];
         PreparedStatement ps = null;
         ResultSet rs = null;
         try
@@ -40,6 +40,20 @@ public class modelos extends New_Connection {
             ps = getNew_Connection().prepareStatement(consulta);
             rs = ps.executeQuery();
             
+             
+            int fil = 1;
+            while (rs.next()) 
+            {
+              fil++; //Con esto encuentro el número de filas
+            }
+            int col= rs.getMetaData().getColumnCount(); //Este me halla el número de columnas
+            
+           rs.beforeFirst(); //Con este devuelvo el resultSet a la posición original para poder usar
+                             //rs.next() denuevo
+            
+          // System.out.println(fil+" "+col);
+            
+          filas = new String[fil][col];
 
             while (rs.next()) 
             {

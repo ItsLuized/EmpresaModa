@@ -67,9 +67,6 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <h1 style="text-align: center;"><strong>PLANTA DE PRODUCCIÓN</strong></h1>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-
     <table border="2" align="center" > 
       
      <tr>
