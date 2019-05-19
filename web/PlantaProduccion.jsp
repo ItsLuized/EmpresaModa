@@ -3,10 +3,13 @@
     Created on : May 10, 2019, 12:39:04 PM
     Author     : Juan
 --%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Statement"%>
 <%@page import="Conn.ConeccionMySQL"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>
+<%@page import="modelos.modelos"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>
   <head>
@@ -74,49 +77,22 @@
      <th>Direccion</th>
      <th>Proceso</th>
      </tr>
-    
-    <%
-    
-    PreparedStatement ps = null; 
-    try
-      {
-       ConeccionMySQL connMySQL = new ConeccionMySQL();
-       Connection conn = connMySQL.setConeccion();
-       ps = conn.prepareStatement("SELECT Pdp.NIT_Planta,Pdp.DireccionPlanta,Pdpro.DescripcionProceso "
-               + "                FROM Planta_de_produccion Pdp INNER JOIN Proceso_de_Produccion Pdpro "
-               + "                ON Pdp.ID_Planta=Pdpro.ID_Planta" );
-              
-		ResultSet rs = ps.executeQuery();
-        while (rs.next()) 
-        {
-        %>
-           <tbody>
-            <tr>
-            <td><%=rs.getString(1)%></td>
-            <td><%=rs.getString(2) %></td>
-            <td><%=rs.getString(3) %></td>
-           </tr>  
-          <tbody>
-         <%
-        }
-        %>
-        </table>
-        <%
-        rs.close();
-        ps.close();
-        conn.close();
-        }        
-      catch (Exception e)
-            {
-	      System.err.println("ERRORo: " + e.getMessage());
-	    }
-            finally 
-            {
-           
-	    }
      
-    %>
+    <%
+    modelos data = new modelos();
+    String[][] filas =  data.getData();
+    for(int i=1; i<filas.length; i++)
+    {
+        %>
+        <tr>
+        <td><%=filas[i][0]%></td>
+        <td><%=filas[i][1]%></td>
+        <td><%=filas[i][2]%></td>
+        </tr>
+        <% 
 
+    }  
+%>
 
 
      <p>&nbsp;</p>

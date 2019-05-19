@@ -118,6 +118,7 @@ public class Coneccion
 	}
         public static void CambioNacionalidadMarca() throws ClassNotFoundException, SQLException, InstantiationException, IllegalAccessException
 	{
+            /*
 		// Hago la conexi�n
 		Connection conn = connMySQL.setConeccion();
 		// Creo la Sentencia
@@ -135,10 +136,25 @@ public class Coneccion
                 {
                   System.out.println("Esa marca no existe");  
                 }
-                
-		rs.close();
-		ps.close();
-
+            
+            */   
+            
+       Connection conn = connMySQL.setConeccion();
+       ps = conn.prepareStatement("SELECT Pdp.NIT_Planta,Pdp.DireccionPlanta,Pdpro.DescripcionProceso "
+               + "                FROM Planta_de_produccion Pdp INNER JOIN Proceso_de_Produccion Pdpro "
+               + "                ON Pdp.ID_Planta=Pdpro.ID_Planta" );
+              
+		ResultSet rs = ps.executeQuery();
+        while (rs.next()) 
+        {
+        System.out.println("NIT = " + rs.getString(1)
+					+ "\n" + "DIREC = " + rs.getString(2) + "\n"
+                                        + "DESCRI = " + rs.getString(3) + "\n");
+		
+        }	
+        rs.close();
+        ps.close();
+ 
         System.exit(0);
 	}
 }
