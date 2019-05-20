@@ -50,7 +50,7 @@
           <a class="nav-link" href="./MateriaPrima.jsp">Materia Prima</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./Proveedores.jsp">Plantas de Produccion</a>
+          <a class="nav-link" href="./PlantaProduccion.jsp">Plantas de Produccion</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./Bodegas.jsp">Bodegas</a>
@@ -68,11 +68,6 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <h1 align="center"><strong>Bodegas&nbsp;</strong></h1>
-
-<select name="OS">
-<option selected="selected" value="0">Escoge la Bodega</option>
-<option value="1">Bodega 1</option>
-</select>
 
  <table border="2" align="center" > 
       
@@ -102,12 +97,14 @@
 
 
 
-
+<!--
 <div>
 <p align="center">&nbsp;<strong>Direcci&oacute;n</strong></p>
 <p align="center"><textarea cols="60" name="Direccion" rows="2"></textarea></p>
 <p align="center">&nbsp;<strong>Lotes</strong></p>
 <p align="center"><textarea cols="60" name="Lotes" rows="1"></textarea></p>
 </div>
+
+-->
 </body>
 </html>

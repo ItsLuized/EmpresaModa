@@ -5,7 +5,6 @@
 --%>
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.Statement"%>
-<%@page import="Conn.ConeccionMySQL"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>
@@ -52,13 +51,13 @@
             <a class="nav-link" href="./PlantaProduccion.jsp">Plantas de Produccion</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Bodegas</a>
+            <a class="nav-link" href="./Bodegas.jsp">Bodegas</a>
           </li>
             <li class="nav-item">
-            <a class="nav-link" href="">Prendas</a>
+            <a class="nav-link" href="./Prendas.jsp">Prendas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Comprar Inventario</a>
+            <a class="nav-link" href="./CompraInventario">Comprar Inventario</a>
           </li>
         </ul>
       </div>
@@ -95,7 +94,7 @@
      <p>&nbsp;</p>
      <p>&nbsp;</p>
      <p>&nbsp;</p>
-
+<!--
     <table style="height: 94px; margin-left: auto; margin-right: auto;" width="713">
     <tbody>
     <tr>
@@ -115,6 +114,7 @@
     </tr>
     </tbody>
     </table>
+-->
             <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->

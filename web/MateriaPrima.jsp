@@ -98,7 +98,7 @@
 
 
 
-
+<!--
 <div>
 <p align = "center">&nbsp;<strong>Nombre</strong></p>
 <p align = "center"><textarea cols="60" name="Nombre" rows="1"></textarea></p>
@@ -109,4 +109,5 @@
 <p align = "center">&nbsp;<strong>Proovedor</strong></p>
 <p align = "center"><textarea cols="60" name="Proveedor" rows="1"></textarea></p>
 </div>
+-->
 </body>

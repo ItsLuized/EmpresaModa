@@ -57,6 +57,9 @@
       </div>
     </nav>
 
+    
+      
+<!--     
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <h1 style="text-align: center;"><strong>EMPLEADO</strong></h1>
@@ -78,6 +81,8 @@
     </tr>
     </tbody>
     </table>
+
+-->
             <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->

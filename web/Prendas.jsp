@@ -93,7 +93,7 @@
 %>
     </table>
 
-
+<!--
 <p>&nbsp;</p>
 <p align="center"><button> Ordenar Por Nombre </button></p>
 <p align="center"><button> Ordenar Por Tipo </button></p>
@@ -101,5 +101,7 @@
 <p align="center"><textarea cols="25" name="text" rows="1"></textarea></p>
 <p align="center">&nbsp;<strong>Tipo de Prenda</strong></p>
 <p align="center"><textarea cols="25" name="text" rows="1"></textarea></p>
+
+-->
 </body>
 </html>
