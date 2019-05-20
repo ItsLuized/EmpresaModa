@@ -34,12 +34,11 @@ public class Log extends New_Connection {
         ResultSet rs = null;
         try
         {
-            String consulta = "SELECT E.Correo,E.Contraseña\n" +
-                                "FROM Empleado E;";
+            String consulta = "SELECT E.NombreEmpleado,E.ApellidoEmpleado,E.DireccionEmpleado\n" +
+                                "FROM Empleado E";
             ps = getNew_Connection().prepareStatement(consulta);
             rs = ps.executeQuery();
-            
-             
+
             int fil = 1;
             while (rs.next()) 
             {
@@ -58,6 +57,7 @@ public class Log extends New_Connection {
             {
                 filas[i][0] = rs.getString(1);
                 filas[i][1] = rs.getString(2);
+                filas[i][2] = rs.getString(3);
                 i++;
             }
         }
@@ -83,7 +83,7 @@ public class Log extends New_Connection {
         try {
             co = new Log();
             String[][] columnas = co.getData();
-            for(int i=1; i<columnas[0].length; i++)
+            for(int i=1; i<columnas.length; i++)
             {
                 System.out.println(columnas[i][1]);
             }

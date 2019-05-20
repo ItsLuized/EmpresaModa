@@ -4,7 +4,6 @@
     Author     : Juan
 --%>
 
-<%@page import="modelos.Log"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="es">
@@ -24,25 +23,23 @@
   </head>
 
   <body class="text-center">
-    <form class="form-signin" method="post">
+    <form class="form-signin"  action="LOG" method="post">
         
       <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">  
       
       <h1 class="h3 mb-3 font-weight-normal">Por favor ingrese su usuario</h1> 
       
       <label for="inputEmail" >Correo Electrónico</label>  
-      <input type="text" name="USER" class="form-control" placeholder="Correo Electrónico" required autofocus>
-      
-      <label for="inputPassword" >Contraseña</label>   
-      <input type="password" name="PASS" class="form-control"  placeholder="Contraseña" required>
-      
+      <input type="text" name="user" class="form-control" placeholder="Correo Electrónico" required autofocus>
+      <br> 
+      <label for="inputPassword" >Contraseña</label> 
+      <br> 
+      <input type="password" name="pass" class="form-control"  placeholder="Contraseña" required>
+      <br> 
       <input type="submit" value="Iniciar Sesion"/>
-      
-      
      </form> 
       
-      
-      
+     
       <p>&copy; 2018-2019</p>
   </body>
 </html>

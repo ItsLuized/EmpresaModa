@@ -3,7 +3,7 @@
     Created on : May 10, 2019, 10:05:54 PM
     Author     : Juan
 --%>
-
+<%@page import="modelos.Log"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>
   <head>
@@ -57,6 +57,33 @@
       </div>
     </nav>
 
+      
+  <h1 align="center"><strong>Datos de los Empleados&nbsp;</strong></h1>
+
+  <table border="2" align="center" > 
+      
+     <tr>
+     <th>Nombre</th>
+     <th>Apellido</th>
+     <th>Direccion de Residencia</th>
+     </tr>
+     
+    <%
+    Log data = new Log();
+    String[][] filas =  data.getData();
+    for(int i=1; i<filas.length; i++)
+    {
+        %>
+        <tr>
+        <td><%=filas[i][0]%></td>
+        <td><%=filas[i][1]%></td>
+        <td><%=filas[i][2]%></td>
+        </tr>
+        <% 
+    }  
+%>
+    </table>
+      
     
       
 <!--     
