@@ -19,7 +19,7 @@ Usamos [Git](http://git-scm.com) para control de versiones.
 * JDBC
 * XChart
 
-#Requerimientos:
+## Requerimientos:
 
   1.	La empresa necesita una base de datos para almacenar información de sus empleados, proveedores, plantas de producción, materia        prima y artículos producidos.
   2.	De la empresa es necesario saber el nombre, teléfono, dirección, email, los proveedores con los cuales se comunica y las plantas      de producción que tiene a su disposición.
