@@ -13,9 +13,11 @@ Usamos [Git](http://git-scm.com) para control de versiones.
 * **Juanse Obando** - [TheObands](https://github.com/TheObands)
 * **Mateo Bravo** 
 
-## Frameworks & Libraries
+## Libraries
 
 * Servlets
+* JDBC
+* XChart
 
 ---
 
