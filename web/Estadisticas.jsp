@@ -13,7 +13,8 @@
     <!-- Bootstrap core CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
+    <link href="css/starter-template.css" rel="stylesheet">
+    <link href="css/various.css" rel="stylesheet">
   </head>
 
   <body>
@@ -53,37 +54,23 @@
       </div>
     </nav>
     
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <h1 style="text-align: center;"><strong>Estadísticas</strong></h1>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
+    <h1 class ="titulo1"><strong>Estadísticas</strong></h1>
     
-    
-    
-  
-    <p>&nbsp;</p>
-    <h5 style="text-align: left;"><strong>Número de compras por empleado</strong></h5>
-    <img src="images/EmpleadoNumCompras.png" width="600" height="450">
-   <p>&nbsp;</p>
-
-
-
-    <h5 style="text-align: left;"><strong>Porcentaje de los lotes de materia prima en cada bodega</strong></h5>
-   <img src="images/BodegasPorcentajeLote.png" width="600" height="450">
-    <p>&nbsp;</p>
-    
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <h5 style="text-align: left;"><strong>Porcentaje de las compras realizadas por empleado</strong></h5>
-    <img src="images/EmpleadoPorcentajeCompras.png" width="600" height="450">
-    <p>&nbsp;</p>
-    
-   
-
-
-    
-
+    <h3 class ="titulo1">Numero de compras por empleado:</h3>
+    <div class="graph-main">
+        
+        <img src="images/EmpleadoNumCompras.png" alt="Numero de compras por empleado" width="1000" height="750">
+    </div>
+    <div class="row">
+        <h3 class="titulo">Porcentaje de los lotes de materia prima en cada bodega:  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 
+            Porcentaje de las compras realizadas por empleado: <br></h3>
+        <div class="column">
+          <img src="images/BodegasPorcentajeLote.png" alt="Porcentaje de los lotes de materia prima en cada bodega" width="700" height="550">
+        </div>
+        <div class="column">
+          <img src="images/EmpleadoPorcentajeCompras.png" alt="Porcentaje de las compras realizadas por empleado" width="700" height="550">
+        </div>
+    </div>
     
             <!-- Bootstrap core JavaScript
         ================================================== -->

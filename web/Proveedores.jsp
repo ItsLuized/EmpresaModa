@@ -63,9 +63,6 @@
     </div>
   </nav>
 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
 <h1 align="center"><strong>Proveedores&nbsp;</strong></h1>
 <p>&nbsp;</p>
 

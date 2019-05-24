@@ -17,7 +17,7 @@
     <!-- Bootstrap core CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
+    <link href="css/starter-template.css" rel="stylesheet">
   </head>
 
   <body>
@@ -51,22 +51,15 @@
           <a class="nav-link" href="./Prendas.jsp">Prendas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./Estadisticas">Estadísticas</a>
+          <a class="nav-link" href="./Estadisticas.jsp">Estadísticas</a>
         </li>
       </ul>
       </div>
     </nav>
      
 
-   <p>&nbsp;</p>
-<p>&nbsp;</p>
-
     <main role="main" class="container">
 
-      <div class="starter-template">
-       
-         
-      </div>
         
         <div>
             <h1 style="text-align: center;">BIENVENIDO</h1>
@@ -86,7 +79,7 @@
             </p>
             
             <div style ="display: flex; justify-content: center">
-            <img src="images/julian.jpg" alt="Julian Jimenez, actual CEO de la compañía" height="500" width="500" align="center">
+            <img src="images/julian.jpg" alt="Julian Jimenez, actual CEO de la compañía" height="500" width="500">
             </div>
            <p>
                

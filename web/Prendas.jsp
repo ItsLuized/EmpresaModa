@@ -64,8 +64,6 @@
     </div>
   </nav>
 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
  <h1 style="text-align: center;"><strong>PRENDAS</strong></h1>
 <p>&nbsp;</p>
 
