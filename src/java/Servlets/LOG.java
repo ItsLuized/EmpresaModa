@@ -42,7 +42,7 @@ public class LOG extends HttpServlet {
       request.getRequestDispatcher("DatosEmpleado.jsp").forward(request, response);
      */ 
       
-      if(user.equals("abc") && pass.equals("asd") || user.equals("juanperez@parfait.com") && pass.equals("00000"))
+      if(user.equals("abc") && pass.equals("asd") || user.equals("juanperez@parfait.com") && pass.equals("00000") || user.equals("dylannavarro@parfait.com") && pass.equals("11111") || user.equals("omargomez@parfait.com") && pass.equals("22222") || user.equals("cristianbotero@parfait.com") && pass.equals("33333") )
       {
           response.sendRedirect("HomePage.jsp");
  

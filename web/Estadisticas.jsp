@@ -1,10 +1,6 @@
-<%-- 
-    Document   : DatosEmpleado
-    Created on : May 10, 2019, 10:05:54 PM
-    Author     : Juan
---%>
-<%@page import="modelos.Log"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+
+
 <!doctype html>
   <head>
     <meta charset="utf-8">
@@ -12,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Inicio</title>
+    <title>Estadísticas</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -29,7 +25,7 @@
       </button>
   
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-         <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav mr-auto">
           <a class="nav-link" href="./HomePage.jsp">Homepage</a>
         </li>
         <li class="nav-item">
@@ -51,65 +47,44 @@
           <a class="nav-link" href="./Prendas.jsp">Prendas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./Estadisticas.jsp">EstadÃ­sticas</a>
+          <a class="nav-link" href="./Estadisticas.jsp">Estadísticas</a>
         </li>
       </ul>
       </div>
     </nav>
-
-      
-  <h1 align="center"><strong>Datos de los Empleados&nbsp;</strong></h1>
-
-  <table border="2" align="center" > 
-      
-     <tr>
-     <th>Nombre</th>
-     <th>Apellido</th>
-     <th>Direccion de Residencia</th>
-     </tr>
-     
-    <%
-    Log data = new Log();
-    String[][] filas =  data.getData();
-    for(int i=1; i<filas.length; i++)
-    {
-        %>
-        <tr>
-        <td><%=filas[i][0]%></td>
-        <td><%=filas[i][1]%></td>
-        <td><%=filas[i][2]%></td>
-        </tr>
-        <% 
-    }  
-%>
-    </table>
-      
     
-      
-<!--     
     <p>&nbsp;</p>
     <p>&nbsp;</p>
-    <h1 style="text-align: center;"><strong>EMPLEADO</strong></h1>
+    <h1 style="text-align: center;"><strong>Estadísticas</strong></h1>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
-    <table style="height: 94px; margin-left: auto; margin-right: auto;" width="713">
-    <tbody>
-    <tr>
-    <td style="width: 355px;"><strong>Nombre</strong></td>
-    <td align = "center"><textarea cols="25" name="Nombre" rows="1"></textarea></td>
-    </tr>
-    <tr>
-    <td style="width: 355px;"><strong>Direcci&oacute;n</strong></td>
-    <td align = "center"><textarea cols="25" name="Direccion" rows="1"></textarea></td>
-    </tr>
-    <tr>
-    <td style="width: 355px;"><strong>Cargo</strong></td>
-    <td align = "center"><textarea cols="25" name="Cargo" rows="1"></textarea></td>
-    </tr>
-    </tbody>
-    </table>
+    
+    
+    
+  
+    <p>&nbsp;</p>
+    <h5 style="text-align: left;"><strong>Número de compras por empleado</strong></h5>
+    <img src="images/EmpleadoNumCompras.png" width="600" height="450">
+   <p>&nbsp;</p>
 
--->
+
+
+    <h5 style="text-align: left;"><strong>Porcentaje de los lotes de materia prima en cada bodega</strong></h5>
+   <img src="images/BodegasPorcentajeLote.png" width="600" height="450">
+    <p>&nbsp;</p>
+    
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h5 style="text-align: left;"><strong>Porcentaje de las compras realizadas por empleado</strong></h5>
+    <img src="images/EmpleadoPorcentajeCompras.png" width="600" height="450">
+    <p>&nbsp;</p>
+    
+   
+
+
+    
+
+    
             <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->

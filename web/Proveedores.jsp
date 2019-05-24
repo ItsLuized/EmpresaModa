@@ -39,7 +39,7 @@
           <a class="nav-link" href="./HomePage.jsp">Homepage</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./DatosEmpleado.jsp">Datos Personales</a>
+          <a class="nav-link" href="./DatosEmpleado.jsp">Datos Personal</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./Proveedores.jsp">Proveedores</a>
@@ -57,7 +57,7 @@
           <a class="nav-link" href="./Prendas.jsp">Prendas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./CompraInventario">Comprar Inventario</a>
+          <a class="nav-link" href="./Estadisticas.jsp">Estadísticas</a>
         </li>
       </ul>
     </div>
