@@ -16,7 +16,6 @@
     <title>Login</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/estilo_Login.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
@@ -26,7 +25,7 @@
   <body class="text-center">
     <form class="form-signin"  action="LOG" method="post">
         
-      <img class="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">  
+      <img class="mb-4" src="images/parfait.png" alt="Pairfait logo" width="200" height="75">  
       
       <h1 class="h3 mb-3 font-weight-normal">Por favor ingrese su usuario</h1> 
       
@@ -40,7 +39,9 @@
       <input type="submit" value="Iniciar Sesion"/>
      </form> 
       
-     
-      <p>&copy; 2018-2019</p>
+    <div class ="footer">
+        <p>Parfait&copy; 2018-2019 <br>
+        Luis Martinez, Sebastian Giraldo, Juan Obando, Mateo Bravo</p>
+     </div>
   </body>
 </html>
