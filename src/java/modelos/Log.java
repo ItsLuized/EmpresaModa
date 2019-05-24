@@ -6,6 +6,7 @@
 package modelos;
 
 import conexion.New_Connection;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -19,8 +20,7 @@ import java.util.logging.Logger;
 public class Log extends New_Connection {
     //private final String bdp      = "autenticar";
     
-    public Log() throws Exception {
-        
+    public Log() {        
 
     }
     
@@ -76,6 +76,38 @@ public class Log extends New_Connection {
         }
         return filas;
     }
+    
+    public String validarCredenciales(String correo, String clave){
+        String claveEnRegistro = "";
+        Connection con = getNew_Connection();
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        
+        String queryClave = "SELECT Contraseña FROM Empleado E\n"
+                + " INNER JOIN Cargo C\n"
+                + " ON E.ID_Cargo = C.ID_Cargo\n"
+                + " WHERE Correo LIKE " + "'"+correo+"'" +"\nAND "
+                + " C.NombreCargo LIKE '%Senior%';";
+        
+        System.out.println(queryClave);
+        try{
+            ps = con.prepareStatement(queryClave);
+            rs = ps.executeQuery();
+            
+            rs.next();
+            claveEnRegistro = rs.getString(1);
+            
+            rs.close();
+            ps.close();
+            
+        }catch(Exception e){
+            System.out.println("Hubo un error consultando las credenciales en la base de datos "+e);
+        }
+        
+        return claveEnRegistro;
+    }
+    
+    
     
     public static void main(String[] args)
     {

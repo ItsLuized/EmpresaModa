@@ -19,7 +19,7 @@ import java.sql.SQLException;
 public class New_Connection 
 {
     private String   usuario        = "root";
-    private String   password       = "root";
+    private String   password       = "SQLroot1911";
     private String   servidor       = "localhost";
     private int      puerto         = 3306;
     private String   basedatos      = "empresamoda";

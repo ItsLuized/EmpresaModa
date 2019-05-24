@@ -35,15 +35,15 @@ public class MP extends New_Connection {
         try
         {
             String consulta = "SELECT MP.NombreLoteMP,TMP.NombreTipoMP,B.DescripcionBodega,Pro.NombreProveedor\n" +
-                                "FROM Proveedor Pro INNER JOIN Compra C\n" +
-                                "ON Pro.ID_Proveedor=C.ID_Proveedor\n" +
-                                "INNER JOIN Lote_Materia_Prima MP\n" +
-                                "ON MP.ID_Lote_MP=C.ID_Lote_MP\n" +
-                                "INNER JOIN Tipo_Materia_Prima TMP\n" +
-                                "ON MP.ID_Tipo_MP=TMP.ID_Tipo_MP\n" +
-                                "INNER JOIN Bodega B\n" +
-                                "ON B.ID_Bodega=MP.ID_Bodega\n" +
-                                "ORDER BY MP.NombreLoteMp";
+"                                FROM lote_materia_prima MP LEFT OUTER JOIN Compra Co\n" +
+"                                ON MP.`ID_Lote_MP` = Co.`ID_Lote_MP`\n" +
+"                                LEFT OUTER JOIN tipo_materia_prima tmp\n" +
+"                                ON MP.`ID_Tipo_MP` = tmp.`ID_Tipo_MP`\n" +
+"                                LEFT OUTER JOIN Bodega B\n" +
+"                                ON B.`ID_Bodega` = MP.`ID_Bodega`\n" +
+"                                LEFT OUTER JOIN Proveedor pro\n" +
+"                                ON pro.`ID_Proveedor` = Co.`ID_Proveedor`\n" +
+"                                ORDER BY MP.NombreLoteMp;";
             ps = getNew_Connection().prepareStatement(consulta);
             rs = ps.executeQuery();
             
