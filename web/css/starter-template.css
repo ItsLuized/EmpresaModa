@@ -12,3 +12,13 @@ body {
   width:300px;
   height:300px;
  }
+.form label{
+   display: inline-block;
+   text-align: right;
+   float: left;
+}
+.form input{
+   display: inline-block;
+   text-align: left;
+   float: right;
+}
