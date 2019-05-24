@@ -57,8 +57,8 @@
       </div>
     </nav>
 
-      <p>&n&nbsp;</p>
-      <p>&n&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
     <h1 align="center"><strong>Datos de los Empleados&nbsp;</strong></h1>
     <p>&nbsp;</p>
 
