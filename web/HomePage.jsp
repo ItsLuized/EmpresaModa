@@ -70,6 +70,7 @@
         
         <div>
             <h1 style="text-align: center;">BIENVENIDO</h1>
+            <p>&nbsp;</p>
             <h2>Senior Comprador: Encontrarás el acceso a la información de la empresa y podrás realizar ingresos de compras. </h2>
            <p>&nbsp;</p>
             <h2>Nuestra historia</h2>
