@@ -6,7 +6,7 @@
 <%@page import="modelos.Log"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!doctype html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -18,9 +18,9 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
-  </head>
+</head>
 
-  <body>
+<body>
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="#">Parfait</a>
@@ -57,31 +57,33 @@
       </div>
     </nav>
 
-      
-  <h1 align="center"><strong>Datos de los Empleados&nbsp;</strong></h1>
+      <p>&n&nbsp;</p>
+      <p>&n&nbsp;</p>
+    <h1 align="center"><strong>Datos de los Empleados&nbsp;</strong></h1>
+    <p>&nbsp;</p>
 
-  <table border="2" align="center" > 
-      
-     <tr>
-     <th>Nombre</th>
-     <th>Apellido</th>
-     <th>Direccion de Residencia</th>
-     </tr>
-     
-    <%
-    Log data = new Log();
-    String[][] filas =  data.getData();
-    for(int i=1; i<filas.length; i++)
-    {
-        %>
+    <table border="2" align="center" > 
+
         <tr>
-        <td><%=filas[i][0]%></td>
-        <td><%=filas[i][1]%></td>
-        <td><%=filas[i][2]%></td>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Direccion de Residencia</th>
         </tr>
-        <% 
-    }  
-%>
+
+        <%
+            Log data = new Log();
+            String[][] filas =  data.getData();
+            for(int i=1; i<filas.length; i++)
+            {
+                %>
+                <tr>
+                <td align = "center"><%=filas[i][0]%></td>
+                <td align = "center"><%=filas[i][1]%></td>
+                <td align = "center"><%=filas[i][2]%></td>
+                </tr>
+                <% 
+            }  
+        %>  
     </table>
       
     
@@ -117,5 +119,5 @@
         <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
         <script src="../../assets/js/vendor/popper.min.js"></script>
         <script src="../../dist/js/bootstrap.min.js"></script>
-    </body>
-    </html>
+</body>
+</html>

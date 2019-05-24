@@ -68,6 +68,7 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <h1 align="center"><strong>Bodegas&nbsp;</strong></h1>
+<p>&nbsp;</p>
 
  <table border="2" align="center" > 
       
@@ -84,9 +85,9 @@
     {
         %>
         <tr>
-        <td><%=filas[i][0]%></td>
-        <td><%=filas[i][1]%></td>
-        <td><%=filas[i][2]%></td>
+        <td align = "center"><%=filas[i][0]%></td>
+        <td align = "center"><%=filas[i][1]%></td>
+        <td align = "center"><%=filas[i][2]%></td>
         </tr>
         <% 
 
