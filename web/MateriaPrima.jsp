@@ -4,6 +4,9 @@
     Author     : Juan
 --%>
 
+<%@page import="modelos.ListaBodega"%>
+<%@page import="modelos.ListaTipoMP"%>
+<%@page import="modelos.ListaProceso"%>
 <%@page import="modelos.MP"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <IDOCTYPE html>
@@ -97,6 +100,142 @@
     </table>
 
 
+    
+ <p>&nbsp;</p>
+
+ 
+  <form action="ServletRegistro" method="get">
+            <table border="2" align="center">
+            <tr>
+                <td>ID:</td>
+                <td><input type="number" size="20" name="ID_LoteMP"></td>
+            </tr> 
+            <tr>
+                <td>Nombre:</td>
+                <td><input type="text" size="20" name="Nombre"></td>
+            </tr> 
+            <tr>
+                <td>Costo:</td>
+                <td><input type="number" size="20" name="Costo"></td>
+            </tr> 
+            <tr>
+            <td>ID del Tipo de Materia Prima:</td>
+                <td>
+                    <select name="ID_TipoMP">
+                    <%
+                    ListaTipoMP elDato = new ListaTipoMP();
+                    String[][] ID =  elDato.getData();
+                    for(int i=1; i<ID.length; i++)
+                    { //Me imprime los datos mientras existan filas 
+                        %>
+                        <option value="1"><%=ID[i][0]%></option>     
+                        <%      
+
+                    }  
+                %>
+                    </select>
+                </td>
+            </tr>   
+            <tr>
+            <td>Bodega en donde almacenar:</td>
+                <td>
+                    <select name="ID_Bodega">
+                    <%
+                    ListaBodega elDatu = new ListaBodega();
+                    String[][] Bod =  elDatu.getData();
+                    for(int i=1; i<Bod.length; i++)
+                    { //Me imprime los datos mientras existan filas 
+                        %>
+                        <option value="1"><%=Bod[i][0]%></option>     
+                        <%      
+
+                    }  
+                %>
+                    </select>
+                </td>
+            </tr>   
+            <tr>
+            <td>Proceso en el cual seria usado:</td>
+                <td>
+                    <select name="ID_Proceso">
+                    <%
+                    ListaProceso elDatico = new ListaProceso();
+                    String[][] Pro =  elDatico.getData();
+                    for(int i=1; i<Pro.length; i++)
+                    { //Me imprime los datos mientras existan filas 
+                        %>
+                        <option value="1"><%=Pro[i][0]%></option>     
+                        <%      
+
+                    }  
+                %>
+                    </select>
+                </td>
+            </tr> 
+            <tr>
+            <td colspan="2" align="center"><input type="submit" value="Registrar"></td>
+            </tr>
+            </table>
+        </form>
+       
+           <p style="text-align: center;"><strong>Para la inserción de datos es importante que tenga encuenta la siguiente información:</strong></p>
+           <p style="text-align: left;">&nbsp;</p>
+            <p style="text-align: center;"><strong>Los números de Tipo de Materia corresponden a lo siguiente:</strong></p>
+            <p style="text-align: center;">&nbsp;</p>
+
+    <table border="2" align="center" > 
+            <tr>
+                <th>ID</th>
+                <th>Tipo de Materia</th>
+            </tr>
+            <tr>
+            <%
+                ListaTipoMP datas = new ListaTipoMP();
+                String[][] filos =  datas.getData();
+                for(int i=1; i<filos.length; i++)
+                { //Me imprime los datos mientras existan filas 
+                    %>
+                    <tr>
+                    <td><%=filos[i][0]%></td>
+                    <td><%=filos[i][1]%></td>
+                    </tr>
+                    <%      
+
+                }  
+            %>
+            </tr> 
+</table>
+    
+    <p style="text-align: center;"><strong>Los números de Proceso corresponden a lo siguiente</strong></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+      
+    
+     <table border="2" align="center" > 
+            <tr>
+                <th>ID</th>
+                <th>Tipo de Materia</th>
+            </tr>
+            <tr>
+            <%
+                 ListaProceso elDaticos = new ListaProceso();
+                    String[][] Prot =  elDaticos.getData();
+                    for(int i=1; i<Prot.length; i++)
+                { //Me imprime los datos mientras existan filas 
+                    %>
+                    <tr>
+                    <td><%=filas[i][0]%></td>
+                    <td><%=filas[i][1]%></td>
+                    </tr>
+                    <%      
+
+                }  
+            %>
+            </tr> 
+</table>
+    
+    
+    
 
 <!--
 <div>
