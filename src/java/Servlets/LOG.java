@@ -50,6 +50,8 @@ public class LOG extends HttpServlet {
       else
       {
          response.sendRedirect("Login.jsp"); 
+         
+         
       }
     }
   }
