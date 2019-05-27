@@ -51,7 +51,7 @@
           <a class="nav-link" href="./Prendas.jsp">Prendas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./Estadisticas.jsp">Estadísticas</a>
+          <a class="nav-link" href="./actualizarGraphs">Estadísticas</a>
         </li>
       </ul>
       </div>
@@ -93,7 +93,15 @@
         </div>
 
     </main><!-- /.container -->
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
+    <div class ="footer">
+    <p>Parfait&copy; 2018-2019 <br>
+    Luis Martinez, Sebastian Giraldo, Juan Obando, Mateo Bravo</p>
+    </div>
+    
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

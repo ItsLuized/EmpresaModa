@@ -35,7 +35,7 @@ public class ListaTipoMP extends New_Connection {
         ResultSet rs = null;
         try
         {
-            String consulta = "SELECT TMP.ID_Tipo_MP, TMP.NombreTipoMP FROM tipo_materia_prima TMP";
+            String consulta = "SELECT TMP.ID_Tipo_MP,TMP.NombreTipoMP FROM tipo_materia_prima TMP";
             ps = getNew_Connection().prepareStatement(consulta);
             rs = ps.executeQuery();
             

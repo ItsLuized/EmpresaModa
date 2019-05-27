@@ -19,11 +19,11 @@ import java.sql.SQLException;
 public class New_Connection 
 {
     private String   usuario        = "root";
-    private String   password       = "SQLroot1911";
+    private String   password       = "root";
     private String   servidor       = "localhost";
     private int      puerto         = 3306;
-    private String   basedatos      = "empresamoda";
-    private String   classname      = "com.mysql.jdbc.Driver";   
+    private String   basedatos      = "EmpresaModa";
+    private String   classname      = "com.mysql.cj.jdbc.Driver";   
     private String   url            = "jdbc:mysql://"+servidor+":"+puerto+"/"+basedatos+"?useSSL=false";
     private Connection con;
     

@@ -6,10 +6,10 @@
 package modelos;
 
 import conexion.New_Connection;
+import java.io.File;
 import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import org.knowm.xchart.*;
 
@@ -40,8 +40,8 @@ public class KnowmGraphs extends New_Connection {
     }
 
     private String[][] resultado;
-    private ArrayList<String> empleados = new ArrayList<String>();
-    private ArrayList<Integer> compras = new ArrayList<Integer>();
+    private ArrayList<String> empleados = new ArrayList<>();
+    private ArrayList<Integer> compras = new ArrayList<>();
     private static String query;
     private ResultSet rs;
     private PreparedStatement ps;
@@ -54,6 +54,18 @@ public class KnowmGraphs extends New_Connection {
 
     public void CreateBarGraphDefinitivo(String query, String titulo, String tituloX, String tituloY) {
         System.out.println("CreateBarGraph corriendo");
+        
+        File file = new File("E:\\Users\\Usuario\\Documents\\EmpresaModa\\web\\images\\"+titulo+".png"); 
+          
+        if(file.delete()) 
+        { 
+            System.out.println("Imagen borrada con exito."); 
+        } 
+        else
+        { 
+            System.out.println("No se pudo borrar la imagen."); 
+        } 
+        
         try {
             ps = getNew_Connection().prepareStatement(query);
             rs = ps.executeQuery();
@@ -82,7 +94,7 @@ public class KnowmGraphs extends New_Connection {
         graficoBarras.addSeries(titulo, empleados, compras, null);
 
         try {
-            BitmapEncoder.saveBitmap(graficoBarras, "../WebApplication1/web/images/" + titulo + ".png", BitmapEncoder.BitmapFormat.PNG);
+            BitmapEncoder.saveBitmap(graficoBarras, "E:\\Users\\Usuario\\Documents\\EmpresaModa\\web\\images\\" + titulo + ".png", BitmapEncoder.BitmapFormat.PNG);
 
         } catch (IOException e) {
             System.out.println("Error guardando la imagen\n" + e);
@@ -94,15 +106,28 @@ public class KnowmGraphs extends New_Connection {
 
     public void CreatePieChart(String query, String title) {
         graficoPastel = new PieChartBuilder().build();
+        String currentDirectory = System.getProperty("user.dir");
+        System.out.println("The current working directory is " + currentDirectory);
+        File file = new File("E:\\Users\\Usuario\\Documents\\EmpresaModa\\web\\images\\"+title+".png"); 
+          
+        if(file.delete()) 
+        { 
+            System.out.println("Imagen borrada con exito."); 
+        } 
+        else
+        { 
+            System.out.println("No se pudo borrar la imagen."); 
+        } 
+        
         try {
             ps = getNew_Connection().prepareStatement(query);
             rs = ps.executeQuery();
 
             while (rs.next()) {
                 try {
-                    float c = Float.parseFloat(rs.getString(1));
-                    String b = rs.getString(2);
-                    graficoPastel.addSeries(b, c);
+                    long a = Long.parseLong(rs.getString(2));
+                    String b = rs.getString(1);
+                    graficoPastel.addSeries(b, a);
 
                 } catch (NumberFormatException e) {
                     System.out.println("Usando el segundo camino");
@@ -119,7 +144,7 @@ public class KnowmGraphs extends New_Connection {
         }
 
         try {
-            BitmapEncoder.saveBitmap(graficoPastel, "../WebApplication1/web/images/" + title + ".png", BitmapEncoder.BitmapFormat.PNG);
+            BitmapEncoder.saveBitmap(graficoPastel, "E:\\Users\\Usuario\\Documents\\EmpresaModa\\web/images\\" + title + ".png", BitmapEncoder.BitmapFormat.PNG);
         } catch (IOException e) {
             System.out.println("error guardando el grafico de pastel " + e);
         }

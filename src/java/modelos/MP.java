@@ -27,7 +27,6 @@ public class MP extends New_Connection {
     public String[][] getData()
     {
         int i = 1;
-        int j = 0;
         String[][] filas = null;
        // filas = new String[20][20];
         PreparedStatement ps = null;
@@ -36,13 +35,13 @@ public class MP extends New_Connection {
         {
             String consulta = "SELECT MP.NombreLoteMP,TMP.NombreTipoMP,B.DescripcionBodega,Pro.NombreProveedor\n" +
 "                                FROM lote_materia_prima MP LEFT OUTER JOIN Compra Co\n" +
-"                                ON MP.`ID_Lote_MP` = Co.`ID_Lote_MP`\n" +
+"                                ON MP.ID_Lote_MP = Co.ID_Lote_MP\n" +
 "                                LEFT OUTER JOIN tipo_materia_prima tmp\n" +
-"                                ON MP.`ID_Tipo_MP` = tmp.`ID_Tipo_MP`\n" +
+"                                ON MP.ID_Tipo_MP = tmp.ID_Tipo_MP\n" +
 "                                LEFT OUTER JOIN Bodega B\n" +
-"                                ON B.`ID_Bodega` = MP.`ID_Bodega`\n" +
+"                                ON B.ID_Bodega = MP.ID_Bodega\n" +
 "                                LEFT OUTER JOIN Proveedor pro\n" +
-"                                ON pro.`ID_Proveedor` = Co.`ID_Proveedor`\n" +
+"                                ON pro.ID_Proveedor = Co.ID_Proveedor\n" +
 "                                ORDER BY MP.NombreLoteMp;";
             ps = getNew_Connection().prepareStatement(consulta);
             rs = ps.executeQuery();
@@ -93,9 +92,9 @@ public class MP extends New_Connection {
         try {
             co = new MP();
             String[][] columnas = co.getData();
-            for(int i=1; i<columnas[0].length; i++)
+            for(int i=1; i<=columnas[0].length; i++)
             {
-                System.out.println(columnas[i][1]);
+                System.out.println(columnas[i][3]);
             }
            /*ArrayList niv = co.columnasGrafico("panel_ordenado", "pp", "agenda");
             Iterator it = niv.iterator();

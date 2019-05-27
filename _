@@ -1,0 +1,17 @@
+created CrearBodega JSP and JAVA
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Fri May 24 05:45:32 2019 -0500
+#
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	modified:   nbproject/project.properties
+#	new file:   src/java/Servlets/Crear.java
+#	new file:   web/CrearBodega.jsp
+#	modified:   web/css/starter-template.css
+#

@@ -59,7 +59,7 @@
           <a class="nav-link" href="./Prendas.jsp">Prendas</a>
         </li>
        <li class="nav-item">
-          <a class="nav-link" href="./Estadisticas.jsp">Estadísticas</a>
+          <a class="nav-link" href="./actualizarGraphs">Estadísticas</a>
         </li>
       </ul>
     </div>
@@ -93,17 +93,10 @@
 %>
     </table>
 
-
-
-
-<!--
-<div>
-<p align="center">&nbsp;<strong>Direcci&oacute;n</strong></p>
-<p align="center"><textarea cols="60" name="Direccion" rows="2"></textarea></p>
-<p align="center">&nbsp;<strong>Lotes</strong></p>
-<p align="center"><textarea cols="60" name="Lotes" rows="1"></textarea></p>
-</div>
-
--->
+    <div class ="footer">
+    <p>Parfait&copy; 2018-2019 <br>
+    Luis Martinez, Sebastian Giraldo, Juan Obando, Mateo Bravo</p>
+    </div>
+    
 </body>
 </html>

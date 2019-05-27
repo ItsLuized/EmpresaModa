@@ -4,6 +4,9 @@
     Author     : Juan
 --%>
 
+<%@page import="modelos.ListaEmpleados"%>
+<%@page import="modelos.ProveeD"%>
+<%@page import="modelos.ListaProveedor"%>
 <%@page import="modelos.ListaBodega"%>
 <%@page import="modelos.ListaTipoMP"%>
 <%@page import="modelos.ListaProceso"%>
@@ -60,15 +63,16 @@
           <a class="nav-link" href="./Prendas.jsp">Prendas</a>
         </li>
        <li class="nav-item">
-          <a class="nav-link" href="./Estadisticas.jsp">Estadísticas</a>
+          <a class="nav-link" href="./actualizarGraphs">Estadísticas</a>
         </li>
       </ul>
     </div>
   </nav>
 
   
-<h1 align="center"><strong>Materia Prima&nbsp;</strong></h1>
-<p>&nbsp;</p>
+<h1 align="center"><strong>Materia Prima</strong></h1>
+<h5 align="center">Esta pagina te ayudará a llevar registro de todas</h5>
+<h5 align="center">Las materias primas que han habido.</h5>
 
  <table border="2" align="center" > 
       
@@ -98,153 +102,124 @@
     </table>
 
 
-    
- <p>&nbsp;</p>
+<p>&nbsp;</p>
 
- 
-  <form action="ServletRegistro" method="get">
-            <table border="2" align="center">
-            <tr>
-                <td>ID:</td>
-                <td><input type="number" size="20" name="ID_LoteMP"></td>
-            </tr> 
-            <tr>
-                <td>Nombre:</td>
-                <td><input type="text" size="20" name="Nombre"></td>
-            </tr> 
-            <tr>
-                <td>Costo:</td>
-                <td><input type="number" size="20" name="Costo"></td>
-            </tr> 
-            <tr>
-            <td>ID del Tipo de Materia Prima:</td>
-                <td>
-                    <select name="ID_TipoMP">
-                    <%
-                    ListaTipoMP elDato = new ListaTipoMP();
-                    String[][] ID =  elDato.getData();
-                    for(int i=1; i<ID.length; i++)
-                    { //Me imprime los datos mientras existan filas 
-                        %>
-                        <option value="1"><%=ID[i][0]%></option>     
-                        <%      
-
-                    }  
-                %>
-                    </select>
-                </td>
-            </tr>   
-            <tr>
-            <td>Bodega en donde almacenar:</td>
-                <td>
-                    <select name="ID_Bodega">
-                    <%
-                    ListaBodega elDatu = new ListaBodega();
-                    String[][] Bod =  elDatu.getData();
-                    for(int i=1; i<Bod.length; i++)
-                    { //Me imprime los datos mientras existan filas 
-                        %>
-                        <option value="1"><%=Bod[i][0]%></option>     
-                        <%      
-
-                    }  
-                %>
-                    </select>
-                </td>
-            </tr>   
-            <tr>
-            <td>Proceso en el cual seria usado:</td>
-                <td>
-                    <select name="ID_Proceso">
-                    <%
-                    ListaProceso elDatico = new ListaProceso();
-                    String[][] Pro =  elDatico.getData();
-                    for(int i=1; i<Pro.length; i++)
-                    { //Me imprime los datos mientras existan filas 
-                        %>
-                        <option value="1"><%=Pro[i][0]%></option>     
-                        <%      
-
-                    }  
-                %>
-                    </select>
-                </td>
-            </tr> 
-            <tr>
-            <td colspan="2" align="center"><input type="submit" value="Registrar"></td>
-            </tr>
-            </table>
-        </form>
-       
-           <p style="text-align: center;"><strong>Para la inserción de datos es importante que tenga encuenta la siguiente información:</strong></p>
-           <p style="text-align: left;">&nbsp;</p>
-            <p style="text-align: center;"><strong>Los números de Tipo de Materia corresponden a lo siguiente:</strong></p>
-            <p style="text-align: center;">&nbsp;</p>
-
-    <table border="2" align="center" > 
-            <tr>
-                <th>ID</th>
-                <th>Tipo de Materia</th>
-            </tr>
-            <tr>
-            <%
-                ListaTipoMP datas = new ListaTipoMP();
-                String[][] filos =  datas.getData();
-                for(int i=1; i<filos.length; i++)
-                { //Me imprime los datos mientras existan filas 
+<h1 align="center">Crear una Materia Prima:</h1>
+    <form action="ServletRegistro" method="get">
+        <table border="2" align="center">
+        <tr>
+            <td>Nombre:</td>
+            <td><input type="text" size="20" name="Nombre"></td>
+        </tr> 
+        <tr>
+            <td>Costo:</td>
+            <td><input type="number" size="20" name="Costo"></td>
+        </tr> 
+        <tr>
+        <td>Tipo de Materia Prima:</td>
+            <td>
+                <select name="ID_TipoMP">
+                <%
+                ListaTipoMP elDato = new ListaTipoMP();
+                String[][] ID =  elDato.getData(); %>
+                    <option value="1"><%=ID[1][1]%></option>
+                    <option value="2"><%=ID[2][1]%></option>
+                    <option value="3"><%=ID[3][1]%></option>
+                    <option value="4"><%=ID[4][1]%></option>
+                </select>
+            </td>
+        </tr>   
+        <tr>
+        <td>Bodega en donde almacenar:</td>
+            <td>
+                <select name="ID_Bodega">
+                <%
+                ListaBodega elDatu = new ListaBodega();
+                String[][] Bod =  elDatu.getData();
+                 //Me imprime los datos mientras existan filas 
                     %>
-                    <tr>
-                    <td><%=filos[i][0]%></td>
-                    <td><%=filos[i][1]%></td>
-                    </tr>
-                    <%      
-
-                }  
-            %>
-            </tr> 
-</table>
-    
-    <p style="text-align: center;"><strong>Los números de Proceso corresponden a lo siguiente</strong></p>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-      
-    
-     <table border="2" align="center" > 
-            <tr>
-                <th>ID</th>
-                <th>Tipo de Materia</th>
-            </tr>
-            <tr>
-            <%
-                 ListaProceso elDaticos = new ListaProceso();
-                    String[][] Prot =  elDaticos.getData();
-                    for(int i=1; i<Prot.length; i++)
-                { //Me imprime los datos mientras existan filas 
+                    <option value="1"><%=Bod[1][0]%></option>   
+                    <option value="2"><%=Bod[2][0]%></option>  
+                    <option value="3"><%=Bod[3][0]%></option>  
+                </select>
+            </td>
+        </tr>   
+        <tr>
+        <td>Proceso en el cual seria usado:</td>
+            <td>
+                <select name="IDProceso">
+                <%
+                ListaProceso elDatico = new ListaProceso();
+                String[][] Pro =  elDatico.getData(); //Me imprime los datos mientras existan filas 
                     %>
-                    <tr>
-                    <td><%=filas[i][0]%></td>
-                    <td><%=filas[i][1]%></td>
-                    </tr>
-                    <%      
+                    <option value="1"><%=Pro[1][0]%></option> 
+                    <option value="2"><%=Pro[2][0]%></option> 
+                    <option value="3"><%=Pro[3][0]%></option> 
+                    <option value="4"><%=Pro[4][0]%></option> 
+                </select>
+            </td>
+        </tr> 
+        <tr>
+        <td>Proveedor que lo vende:</td>
+            <td>
+                <select name="IDProveedor">
+                <%
+                ListaProveedor Data = new ListaProveedor();
+                String[][] Prov =  Data.getData();%>
+                    <option value="0"><%=Prov[0][0]%></option>
+                    <option value="1"><%=Prov[1][0]%></option>
+                    <option value="2"><%=Prov[2][0]%></option>
+                    <option value="3"><%=Prov[3][0]%></option>
+                    <option value="4"><%=Prov[4][0]%></option>
+                    <option value="5"><%=Prov[5][0]%></option>
+                    <option value="6"><%=Prov[6][0]%></option>
+                    <option value="7"><%=Prov[7][0]%></option>
+                    <option value="8"><%=Prov[8][0]%></option>
+                    <option value="9"><%=Prov[9][0]%></option>
+                    <option value="10"><%=Prov[10][0]%></option>
+                    <option value="11"><%=Prov[11][0]%></option>
+                    <option value="12"><%=Prov[12][0]%></option>
+                    <option value="13"><%=Prov[13][0]%></option>
+                    <option value="14"><%=Prov[14][0]%></option>
+                    <option value="15"><%=Prov[15][0]%></option>
+                    <option value="16"><%=Prov[16][0]%></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+         <tr>
+        <td>Empleado que lo comprará:</td>
+            <td>
+                <select name="IDEmpleado">
+                <%
+                ListaEmpleados Emp = new ListaEmpleados();
+                String[][] Emps =  Emp.getData();%>
+                    <option value="0"><%=Emps[0][0]%></option> 
+                    <option value="1"><%=Emps[1][0]%></option> 
+                    <option value="2"><%=Emps[2][0]%></option> 
+                    <option value="3"><%=Emps[3][0]%></option> 
+                    <option value="4"><%=Emps[4][0]%></option> 
+                    <option value="5"><%=Emps[5][0]%></option> 
+                    <option value="6"><%=Emps[6][0]%></option> 
+                    <option value="7"><%=Emps[7][0]%></option> 
+                    <option value="8"><%=Emps[8][0]%></option>
+                </select>
+            </td>
+        </tr>
+        <td colspan="2" align="center">
+        <input type="submit" value="Registrar"></td>
+        </tr>
+        </table>
+    </form> 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
-                }  
-            %>
-            </tr> 
-</table>
+    <div class ="footer">
+    <p>Parfait&copy; 2018-2019 <br>
+    Luis Martinez, Sebastian Giraldo, Juan Obando, Mateo Bravo</p>
+    </div>
     
     
-    
-
-<!--
-<div>
-<p align = "center">&nbsp;<strong>Nombre</strong></p>
-<p align = "center"><textarea cols="60" name="Nombre" rows="1"></textarea></p>
-<p align = "center">&nbsp;<strong>Tipo de Materia Prima</strong></p>
-<p align = "center"><textarea cols="60" name="Tipo MP" rows="1"></textarea></p>
-<p align = "center">&nbsp;<strong>Ubicación del Lote</strong></p>
-<p align = "center"><textarea cols="60" name="Ubicacion" rows="1"></textarea></p>
-<p align = "center">&nbsp;<strong>Proovedor</strong></p>
-<p align = "center"><textarea cols="60" name="Proveedor" rows="1"></textarea></p>
-</div>
--->
+</form>
 </body>

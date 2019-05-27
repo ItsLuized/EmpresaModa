@@ -16,17 +16,17 @@ import java.util.logging.Logger;
  *
  * @author egarces
  */
-public class ListaProceso extends New_Connection {
+public class ListaProveedor extends New_Connection {
     //private final String bdp      = "autenticar";
     
-    public ListaProceso() throws Exception {
+    public ListaProveedor() throws Exception {
         
 
     }
     
     public String[][] getData()
     {
-        int i = 1;
+        int i = 0;
         int j = 0;
         
         String[][] filas = null;
@@ -35,23 +35,22 @@ public class ListaProceso extends New_Connection {
         ResultSet rs = null;
         try
         {
-            String consulta = "SELECT Pro.DescripcionProceso,Pro.ID_Proceso FROM Proceso_de_produccion Pro";
+            String consulta = "SELECT Pro.NombreProveedor,Pro.ID_Proveedor FROM Proveedor Pro";
             ps = getNew_Connection().prepareStatement(consulta);
             rs = ps.executeQuery();
             
-            int fil = 1;
+            int fil = 0;
             while (rs.next()) 
             {
               fil++; //Con esto encuentro el número de filas
             }
             int col= rs.getMetaData().getColumnCount(); //Este me halla el número de columnas
             
-           rs.beforeFirst(); //Con este devuelvo el resultSet a la posición original para poder usar
+            rs.beforeFirst(); //Con este devuelvo el resultSet a la posición original para poder usar
                              //rs.next() denuevo
             
-          // System.out.println(fil+" "+col);
-            
-          filas = new String[fil][col];
+            System.out.println(fil+" "+col);
+            filas = new String[fil][col];
 
             while (rs.next()) 
             {
@@ -82,15 +81,14 @@ public class ListaProceso extends New_Connection {
     
     public static void main(String[] args)
     {
-        ListaProceso co;
+        ListaProveedor co;
         try {
-            co = new ListaProceso();
+            co = new ListaProveedor();
             String[][] columnas = co.getData();
-            for(int i=1; i<columnas[0].length; i++)
+            for(int i=0; i<columnas[0].length; i++)
             {
                 System.out.println(columnas[i][1]);
             }
-            
            /*ArrayList niv = co.columnasGrafico("panel_ordenado", "pp", "agenda");
             Iterator it = niv.iterator();
             while(it.hasNext())
@@ -98,7 +96,7 @@ public class ListaProceso extends New_Connection {
                 System.out.println(it.next());
             }*/
         } catch (Exception ex) {
-            Logger.getLogger(ListaProceso.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ListaProveedor.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

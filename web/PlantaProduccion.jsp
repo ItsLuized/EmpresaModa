@@ -57,7 +57,7 @@
             <a class="nav-link" href="./Prendas.jsp">Prendas</a>
           </li>
          <li class="nav-item">
-          <a class="nav-link" href="./Estadisticas.jsp">Estadísticas</a>
+          <a class="nav-link" href="./actualizarGraphs">Estadísticas</a>
         </li>
         </ul>
       </div>
@@ -91,30 +91,11 @@
 %>
     </table>
 
-     <p>&nbsp;</p>
-     <p>&nbsp;</p>
-     <p>&nbsp;</p>
-<!--
-    <table style="height: 94px; margin-left: auto; margin-right: auto;" width="713">
-    <tbody>
-    <tr>
-    <td style="width: 355px;"><strong>Nit</strong></td>
-    <td align = "center"><textarea cols="25" name="Nit" rows="1"></textarea></td>
-    <td style="width: 357px;">&nbsp;</td>
-    </tr>
-    <tr>
-    <td style="width: 355px;"><strong>Direcci&oacute;n:</strong></td>
-    <td align = "center"><textarea cols="25" name="Direccion" rows="1"></textarea></td>
-    <td style="width: 357px;">&nbsp;</td>
-    </tr>
-    <tr>
-    <td style="width: 355px;"><strong>Procesos</strong></td>
-    <td align = "center"><textarea cols="25" name="Procesos" rows="2"></textarea></td>
-    <td style="width: 357px;">&nbsp;</td>
-    </tr>
-    </tbody>
-    </table>
--->
+    <div class ="footer">
+    <p>Parfait&copy; 2018-2019 <br>
+    Luis Martinez, Sebastian Giraldo, Juan Obando, Mateo Bravo</p>
+    </div>
+    
             <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->

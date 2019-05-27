@@ -34,27 +34,27 @@ public class LOG extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             
-      String user =request.getParameter("user");
-      String pass =request.getParameter("pass");   
-     /* 
-      request.setAttribute("Correo",user);
-      request.setAttribute("Contra",pass);
-      request.getRequestDispatcher("DatosEmpleado.jsp").forward(request, response);
-     */ 
-      
-      if(user.equals("abc") && pass.equals("asd") || user.equals("juanperez@parfait.com") && pass.equals("00000") || user.equals("dylannavarro@parfait.com") && pass.equals("11111") || user.equals("omargomez@parfait.com") && pass.equals("22222") || user.equals("cristianbotero@parfait.com") && pass.equals("33333") )
-      {
-          response.sendRedirect("HomePage.jsp");
- 
-      }
-      else
-      {
-         response.sendRedirect("Login.jsp"); 
-         
-         
-      }
+            String user =request.getParameter("user");
+            String pass =request.getParameter("pass");   
+           /* 
+            request.setAttribute("Correo",user);
+            request.setAttribute("Contra",pass);
+            request.getRequestDispatcher("DatosEmpleado.jsp").forward(request, response);
+           */ 
+
+            if(user.equals("abc") && pass.equals("asd") || user.equals("juanperez@parfait.com") && pass.equals("00000") || user.equals("dylannavarro@parfait.com") && pass.equals("11111") || user.equals("omargomez@parfait.com") && pass.equals("22222") || user.equals("cristianbotero@parfait.com") && pass.equals("33333") )
+            {
+                response.sendRedirect("HomePage.jsp");
+
+            }
+            else
+            {
+               response.sendRedirect("Login.jsp"); 
+
+
+            }
+        }
     }
-  }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

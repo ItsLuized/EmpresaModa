@@ -57,7 +57,7 @@
           <a class="nav-link" href="./Prendas.jsp">Prendas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./Estadisticas.jsp">Estadísticas</a>
+          <a class="nav-link" href="./actualizarGraphs">Estadísticas</a>
         </li>
       </ul>
     </div>
@@ -97,23 +97,10 @@
 %>
     </table>
 
-
-<!--
-<p>&nbsp;</p>
-<p align = "center"><button> Ordenar Por Nombre </button></p>
-<p align = "center"><button> Ordenar Por Materia Prima </button></p>
-<p align = "center"><button> Ordenar Por Costo</button></p>
-<p align = "center">&nbsp;<strong>Nombre</strong></p>
-<p align = "center"><textarea cols="25" name="text" rows="1"></textarea></p>
-<p align = "center">&nbsp;<strong>Direcci&oacute;n</strong></p>
-<p align = "center"><textarea cols="25" name="text" rows="1"></textarea></p>
-<p align = "center">&nbsp;<strong>Email</strong></p>
-<p align = "center"><textarea cols="25" name="text" rows="1"></textarea></p>
-<p align = "center">&nbsp;<strong>Materia Prima</strong></p>
-<p align = "center"><textarea cols="25" name="text" rows="1"></textarea></p>
-<p align = "center">&nbsp;<strong>Costo</strong></p>
-<p align = "center"><textarea cols="25" name="text" rows="1"></textarea></p>
-
--->
+    <div class ="footer">
+    <p>Parfait&copy; 2018-2019 <br>
+    Luis Martinez, Sebastian Giraldo, Juan Obando, Mateo Bravo</p>
+    </div>
+    
 </body>
 </html>

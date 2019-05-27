@@ -30,28 +30,28 @@
   
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
          <ul class="navbar-nav mr-auto">
-          <a class="nav-link" href="./HomePage.jsp">Homepage</a>
+            <a class="nav-link" href="./HomePage.jsp">Homepage</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./DatosEmpleado">Datos Personal</a>
+            <a class="nav-link" href="./DatosEmpleado.jsp">Datos Personal</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./Proveedores.jsp">Proveedores</a>
+            <a class="nav-link" href="./Proveedores.jsp">Proveedores</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./MateriaPrima.jsp">Materia Prima</a>
+            <a class="nav-link" href="./MateriaPrima.jsp">Materia Prima</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./Proveedores.jsp">Plantas de Produccion</a>
+            <a class="nav-link" href="./Proveedores.jsp">Plantas de Produccion</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./Bodegas.jsp">Bodegas</a>
+            <a class="nav-link" href="./Bodegas.jsp">Bodegas</a>
         </li>
-          <li class="nav-item">
-          <a class="nav-link" href="./Prendas.jsp">Prendas</a>
+            <li class="nav-item">
+            <a class="nav-link" href="./Prendas.jsp">Prendas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./Estadisticas.jsp">Estadísticas</a>
+            <a class="nav-link" href="./actualizarGraphs">Estadísticas</a>
         </li>
       </ul>
       </div>
@@ -83,33 +83,12 @@
             }  
         %>  
     </table>
-      
-    
-      
-<!--     
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <h1 style="text-align: center;"><strong>EMPLEADO</strong></h1>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <table style="height: 94px; margin-left: auto; margin-right: auto;" width="713">
-    <tbody>
-    <tr>
-    <td style="width: 355px;"><strong>Nombre</strong></td>
-    <td align = "center"><textarea cols="25" name="Nombre" rows="1"></textarea></td>
-    </tr>
-    <tr>
-    <td style="width: 355px;"><strong>Direcci&oacute;n</strong></td>
-    <td align = "center"><textarea cols="25" name="Direccion" rows="1"></textarea></td>
-    </tr>
-    <tr>
-    <td style="width: 355px;"><strong>Cargo</strong></td>
-    <td align = "center"><textarea cols="25" name="Cargo" rows="1"></textarea></td>
-    </tr>
-    </tbody>
-    </table>
 
--->
+    <div class ="footer">
+    <p>Parfait&copy; 2018-2019 <br>
+    Luis Martinez, Sebastian Giraldo, Juan Obando, Mateo Bravo</p>
+    </div>
+    
             <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
