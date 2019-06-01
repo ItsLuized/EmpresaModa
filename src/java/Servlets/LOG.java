@@ -7,11 +7,14 @@ package Servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URLEncoder;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
+import modelos.Log;
 
 /**
  *
@@ -32,6 +35,7 @@ public class LOG extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
         try (PrintWriter out = response.getWriter()) {
             
             String user =request.getParameter("user");
@@ -41,17 +45,18 @@ public class LOG extends HttpServlet {
             request.setAttribute("Contra",pass);
             request.getRequestDispatcher("DatosEmpleado.jsp").forward(request, response);
            */ 
-
-            if(user.equals("abc") && pass.equals("asd") || user.equals("juanperez@parfait.com") && pass.equals("00000") || user.equals("dylannavarro@parfait.com") && pass.equals("11111") || user.equals("omargomez@parfait.com") && pass.equals("22222") || user.equals("cristianbotero@parfait.com") && pass.equals("33333") )
+           Log login = new Log();
+           String contraseña = login.validarCredenciales(user, pass);
+           
+            if(user.equals(user) && pass.equals(contraseña))
             {
                 response.sendRedirect("HomePage.jsp");
 
             }
             else
             {
-               response.sendRedirect("Login.jsp"); 
-
-
+                //JOptionPane.showMessageDialog(null, "Correo o contraseña incorrectas", "Alerta",JOptionPane.WARNING_MESSAGE);
+                response.sendRedirect("Login.jsp");
             }
         }
     }

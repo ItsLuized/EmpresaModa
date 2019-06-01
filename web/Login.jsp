@@ -37,7 +37,7 @@
       <input type="password" name="pass" class="form-control"  placeholder="Contraseña" required>
       <br> 
       <input type="submit" value="Iniciar Sesion"/>
-     </form> 
+    </form> 
       
     <div class ="footer">
         <p>Parfait&copy; 2018-2019 <br>

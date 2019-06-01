@@ -84,10 +84,7 @@ public class Log extends New_Connection {
         ResultSet rs = null;
         
         String queryClave = "SELECT Contraseña FROM Empleado E\n"
-                + " INNER JOIN Cargo C\n"
-                + " ON E.ID_Cargo = C.ID_Cargo\n"
-                + " WHERE Correo LIKE " + "'"+correo+"'" +"\nAND "
-                + " C.NombreCargo LIKE '%Senior%';";
+                + " WHERE Correo LIKE " + "'"+correo+"';";
         
         System.out.println(queryClave);
         try{
