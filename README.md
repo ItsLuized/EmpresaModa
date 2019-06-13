@@ -13,7 +13,11 @@ Usamos [Git](http://git-scm.com) para control de versiones.
 * **Juanse Obando** - [TheObands](https://github.com/TheObands)
 * **Mateo Bravo** 
 
+<<<<<<< HEAD
 ## Libraries & API's utilizadas
+=======
+## Libraries & API's
+>>>>>>> e831c2cedc7cde42f512a4a98f961c3d96725185
 
 * Servlets
 * JDBC
@@ -21,8 +25,13 @@ Usamos [Git](http://git-scm.com) para control de versiones.
 
 ## Requerimientos:
 
+<<<<<<< HEAD
   1.	La empresa necesita una base de datos para almacenar información de sus empleados, proveedores, plantas de producción, materia prima y artículos producidos.
   2.	De la empresa es necesario saber el nombre, teléfono, dirección, email, los proveedores con los cuales se comunica y las plantas de producción que tiene a su disposición.
+=======
+  1.	La empresa necesita una base de datos para almacenar información de sus empleados, proveedores, plantas de producción, materia        prima y artículos producidos.
+  2.	De la empresa es necesario saber el nombre, teléfono, dirección, email, los proveedores con los cuales se comunica y las plantas      de producción que tiene a su disposición.
+>>>>>>> e831c2cedc7cde42f512a4a98f961c3d96725185
   3.	Se desea saber el nombre, apellido y la edad y cargo que ocupa el empleado.
   4.	De cada cargo, se debe saber el código de empleado que lo ocupa, el nombre del cargo y una descripción de las responsabilidades.
   5.	De los proveedores, se desea saber su nombre, teléfono, dirección y el tipo de materia prima que vende. 

@@ -1,0 +1,36 @@
+body {
+    padding-top: 5rem;
+    background-color: #d4d4d4;
+  }
+  .starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+ .sede
+ {
+  float:right;
+  width:300px;
+  height:300px;
+ }
+.form label{
+   display: inline-block;
+   text-align: right;
+   float: left;
+}
+.form input{
+   display: inline-block;
+   text-align: left;
+   float: right;
+}
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-bottom: 0px;
+    clear: both;
+}
